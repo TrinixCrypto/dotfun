@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2000s Windows Style Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Verdana, Arial, sans-serif; /* Typical 2000's fonts */
+      background-image: url("horsies.png");
+      background-size: cover; /* Makes the image cover the entire screen */
+      background-position: center;
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER */
+    .header {
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      text-shadow: 1px 1px 0 #000;
+      border-bottom: 5px solid #003399;
+    }
+    .header img {
+      max-width: 50%; /* Responsive image scaling */
+      height: auto;
+    }
+
+    /* NAVIGATION */
+    .nav {
+      background-color: rgba(225, 225, 225, 0.8); /* Slightly transparent background */
+      color: #000;
+      padding: 10px;
+      border: 1px solid #999;
+      text-align: center;
+      margin: 10px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #0055ff;
+      padding: 5px 10px;
+      margin: 5px;
+    }
+
+    /* CONTENT */
+    .content {
+      background-color: rgba(255, 255, 255, 0.8); /* Add a transparent white background */
+      border: 1px solid #399;
+      padding: 10px;
+      text-align: justify;
+      max-width: 800px;
+      margin: 20px auto; /* Center content and space it out */
+    }
+
+    /* Developer Profile Section */
+    /* Profile Container */
+    .profile-container {
+      text-align: center; /* Center the entire profile container */
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    /* Profile Container */
+    .profile-container {
+      text-align: left; /* Align content to the left */
+      margin: 20px auto; /* Center the entire container */
+      max-width: 800px; /* Restrict the maximum container width */
+      padding: 20px;
+    }
+
+    /* Profile Title */
+    .profile-title {
+      display: flex; /* Flexbox layout for title and GIF */
+      justify-content: space-between; /* Align title to the left and GIF to the right */
+      align-items: center; /* Vertically center both */
+      margin-bottom: 20px; /* Spacing between title and profile content */
+    }
+
+    .profile-title h2 {
+      background: #003399; /* Same background as other profile sections */
+      color: #ffffff; /* White text color */
+      padding: 4px 6px; /* Compact padding */
+      font-family: "VT323", monospace; /* Matching retro font */
+      font-size: 28px; /* Large font size for the title */
+      line-height: 1.4; /* Tighter line spacing */
+      width: auto; /* Ensure the background wraps only the text */
+      margin: 0; /* No margins to align properly */
+      font-weight: bold; /* Bold for prominence */
+      text-transform: uppercase; /* Capitalized for emphasis */
+    }
+
+    /* Profile GIF */
+    .profile-gif {
+      max-width: 100px; /* Set the maximum size for the GIF */
+      height: auto; /* Maintain aspect ratio of the image */
+    }
+    .profile {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      color: #ffffff; /* Light text color for better contrast */
+      line-height: 1.6;
+      font-size: 18px;
+      font-family: "VT323", monospace; /* Retro VT323 font */
+    }
+
+    /* Profile Highlight Effect */
+    .profile h2, .profile ul, .profile li {
+      background: #003399; /* Dark blue background as a highlight */
+      color: #ffffff; /* White text for readability */
+      padding: 4px 6px; /* Smaller padding for a compact highlight */
+      display: inline-block; /* Ensures cohesive highlighting across gaps */
+      width: auto; /* Removes unnecessary width spanning across the block */
+      line-height: 1.4; /* Tighter line spacing */
+      font-size: 18px; /* Keep font size large for readability */
+    }
+
+    /* Profile Title */
+    .profile h2 {
+      font-size: 28px; /* Larger font size for the title */
+      margin-bottom: 20px; /* Adds spacing below the title */
+      text-transform: uppercase; /* Capitalized for prominence */
+      text-align: center; /* Centers the title */
+      font-weight: bold;
+    }
+
+    /* Profile List */
+    .profile ul {
+      list-style-type: none; /* Removes bullets */
+      padding: 0; /* Removes list padding */
+      margin: 0; /* Removes default margin */
+    }
+
+    .profile ul li {
+      margin-bottom: 15px; /* Adds spacing between list items */
+      font-size: 20px; /* Slightly larger font size for readability */
+    }
+
+    /* Strong emphasis for labels */
+    .profile ul li strong {
+      color: #ffd700; /* Highlighted labels in gold for contrast */
+    }
+
+    /* BUTTON */
+    /* Center container holding the buttons */
+    .button-container {
+      display: flex;
+      justify-content: center; /* Centers buttons horizontally */
+      gap: 20px; /* Adds spacing between buttons */
+      margin: 20px auto;
+    }
+
+    /* Style each button */
+    .button {
+      background-color: #008cba; /* Primary button background */
+      border: 1px solid #003399; /* Adds a border consistent with the theme */
+      color: white; /* Text color */
+      padding: 10px 15px; /* Padding inside the button for spacing */
+      text-align: center; /* Center-align text inside the button */
+      text-decoration: none; /* Removes underline from links */
+      display: flex; /* Allows icon and text to appear side-by-side */
+      align-items: center; /* Vertically aligns icon and text */
+      font-size: 16px; /* Standard font size for buttons */
+      cursor: pointer; /* Changes cursor to pointer for clickability */
+      gap: 8px; /* Spacing between icon and text */
+      border-radius: 5px; /* Optional: Slightly rounded corners */
+      transition: background-color 0.3s; /* Smooth hover effect */
+    }
+
+    /* Button hover effect */
+    .button:hover {
+      background-color: #0055ff; /* Change color on hover */
+    }
+
+    /* Icons inside the buttons */
+    .button img {
+      width: 20px; /* Set a small, consistent icon size */
+      height: 20px; /* Same size as width for square icons */
+      display: inline-block; /* Keeps the icon inline with text */
+      vertical-align: middle; /* Aligns the icon with text */
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .header {
+        font-size: 18px; /* Smaller font size on smaller devices */
+        padding: 10px;
+      }
+
+      .nav {
+        flex-direction: column; /* Stack links vertically */
+        text-align: center;
+      }
+
+      .content {
+        padding: 0 15px;
+      }
+
+      table {
+        font-size: 70%; /* Smaller font sizes for tables */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header {
+        font-size: 16px;
+      }
+
+      .nav a {
+        padding: 5px;
+        margin: 2px;
+      }
+
+      .content {
+        font-size: 14px; /* Reduce font sizes more on smaller devices */
+      }
+    }
+    /* Styling the marquee container */
+    .marquee {
+      width: 100%; /* Full width of the webpage */
+      background-color: rgba(80, 80, 80, 0.8); /* Background color behind the marquee text */
+      color: #fff; /* Text color */
+      font-family: Arial, sans-serif; /* Font style */
+      font-size: 16px; /* Font size */
+      padding: 5px 0; /* Padding for a breathing space */
+      overflow: hidden; /* Hides any overflowed content */
+      white-space: nowrap; /* Prevents text wrapping */
+      text-align: center;
+    }
+
+    /* Apply additional styling for the marquee content */
+    .marquee-text {
+      display: inline-block; /* Keeps the text inline */
+      animation: scrolling 15s linear infinite; /* Adds scrolling animation */
+    }
+
+    /* Define the scrolling animation */
+    @keyframes scrolling {
+      from {
+        transform: translateX(250%); /* Starts outside on the right */
+      }
+      to {
+        transform: translateX(-250%); /* Ends outside on the left */
+      }
+    }
+
+    /* Optional: Hover effect to pause the marquee */
+    .marquee:hover .marquee-text {
+      animation-play-state: paused; /* Pauses the animation */
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <img src="title.png" alt="trinixcrypto.fun">
+</div>
+
+<div class="marquee">
+  <span class="marquee-text">
+    Welcome to my website! Remember how scroll text was the trend? 🚀🐕
+  </span>
+</div>
+
+
+<!-- DEVELOPER PROFILE SECTION -->
+<div class="profile-container">
+  <div class="profile-title">
+    <h2>Developer Profile</h2>
+    <img src="8bit.gif" alt="8-Bit Animation" class="profile-gif">
+  </div>
+  <div class="profile">
+    <ul>
+      <li><strong>Name:</strong> trinixCrypto</li>
+      <li><strong>Role:</strong> Secure Environment Developer</li>
+      <li><strong>Education:</strong> 2nd Year BSc. Cyber Security Student</li>
+      <li><strong>Experience:</strong> 5+ Years in Vulnerability Testing and Backend Systems</li>
+      <li><strong>Other Expertise:</strong> Structural & Mechanical Aircraft Maintenance Engineer</li>
+    </ul>
+
+    <!-- BUTTONS -->
+    <div class="button-container">
+      <a class="button" href="#discord">
+        <img src="disco.png" alt="Discord Icon"> Contact Me (Discord)
+      </a>
+      <a class="button" href="#github">
+        <img src="github.png" alt="GitHub Icon"> GitHub
+      </a>
+      <a class="button" href="#roblox">
+        <img src="roblox.png" alt="Roblox Icon"> Roblox
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  © 2025 trinixcrypto. All Rights Reserved.
+</div>
+</body>
+</html>
