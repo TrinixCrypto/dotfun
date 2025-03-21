@@ -152,42 +152,55 @@
     }
 
     /* BUTTON */
-    /* Center container holding the buttons */
+    /* Desktop Shortcut Icon Container */
     .button-container {
-      display: flex;
-      justify-content: center; /* Centers buttons horizontally */
-      gap: 20px; /* Adds spacing between buttons */
-      margin: 20px auto;
+      display: flex; /* Align buttons in a row */
+      justify-content: center; /* Center the buttons horizontally */
+      gap: 20px; /* Add space between each shortcut icon */
+      margin: 20px auto; /* Center container */
+      flex-wrap: wrap; /* Allow wrapping when the screen is small */
     }
 
-    /* Style each button */
+    /* Each Button/Shortcut Icon */
     .button {
-      background-color: #008cba; /* Primary button background */
-      border: 1px solid #003399; /* Adds a border consistent with the theme */
-      color: white; /* Text color */
-      padding: 10px 15px; /* Padding inside the button for spacing */
-      text-align: center; /* Center-align text inside the button */
-      text-decoration: none; /* Removes underline from links */
-      display: flex; /* Allows icon and text to appear side-by-side */
-      align-items: center; /* Vertically aligns icon and text */
-      font-size: 16px; /* Standard font size for buttons */
-      cursor: pointer; /* Changes cursor to pointer for clickability */
-      gap: 8px; /* Spacing between icon and text */
-      border-radius: 5px; /* Optional: Slightly rounded corners */
-      transition: background-color 0.3s; /* Smooth hover effect */
+      display: flex; /* Enables stacking of image and text */
+      flex-direction: column; /* Stack content vertically */
+      justify-content: center; /* Center content */
+      align-items: center; /* Center shortcut and label */
+      text-decoration: none; /* Removes underline */
+      width: 80px; /* Fixed width for desktop shortcut */
+      height: 100px; /* Fixed height for desktop shortcut */
+      padding: 10px; /* Add padding around the content */
+      transition: transform 0.2s, background-color 0.3s; /* Add hover smooth effects */
+      text-align: center;
+      font-family: "VT323", monospace; /* Retro pixel-style font */
     }
 
-    /* Button hover effect */
-    .button:hover {
-      background-color: #0055ff; /* Change color on hover */
-    }
-
-    /* Icons inside the buttons */
+    /* Icon */
     .button img {
-      width: 20px; /* Set a small, consistent icon size */
-      height: 20px; /* Same size as width for square icons */
-      display: inline-block; /* Keeps the icon inline with text */
-      vertical-align: middle; /* Aligns the icon with text */
+      width: 50px; /* Icon size */
+      height: 50px; /* Icon size */
+      margin-bottom: 10px; /* Space between the icon and label */
+    }
+
+    /* Label/Text */
+    .button span {
+      font-size: 24px; /* Adjust text size for better visibility */
+      color: #ffffff; /* White text for better contrast */
+      background-color: #003399; /* Blue background for highlighting */
+      padding: 1px 4px; /* Reduced padding for a smaller background */
+      display: inline-block; /* Ensures the background wraps tightly around the text */
+      line-height: 1.2; /* Adjusted line height for better appearance */
+    }
+
+    /* Hover Effect */
+    .button:hover {
+      transform: translateY(-5px); /* Lifts the shortcut for a hover effect */
+    }
+
+    /* Active/Click Effect */
+    .button:active {
+      transform: translateY(2px); /* Slight depress effect on click */
     }
 
     /* MEDIA QUERIES */
@@ -287,16 +300,18 @@
       <li><strong>Other Expertise:</strong> Structural & Mechanical Aircraft Maintenance Engineer</li>
     </ul>
 
-    <!-- BUTTONS -->
     <div class="button-container">
       <a class="button" href="#discord">
-        <img src="disco.png" alt="Discord Icon"> Contact Me (Discord)
+        <img src="disco.png" alt="Discord Icon">
+        <span>Discord</span>
       </a>
       <a class="button" href="#github">
-        <img src="github.png" alt="GitHub Icon"> GitHub
+        <img src="github.png" alt="GitHub Icon">
+        <span>GitHub</span>
       </a>
       <a class="button" href="#roblox">
-        <img src="roblox.png" alt="Roblox Icon"> Roblox
+        <img src="roblox.png" alt="Roblox Icon">
+        <span>Roblox</span>
       </a>
     </div>
   </div>
