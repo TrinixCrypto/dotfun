@@ -33,8 +33,17 @@ A fun, retro-styled website inspired by the aesthetics of early 2000s web design
 2. Navigate to the project folder:
    ```bash
    cd dotfun
+   ```
 
 ---
 
-## Contact me:
-* <img height="20" src="https://www.edigitalagency.com.au/wp-content/uploads/Discord-logo-icon-clyde-blurple-png.png" alt="Discord"> **Discord:** <a href="https://discordapp.com/users/192210511180333059" target="_blank">@trinix.</a>
+## Contact Me:
+- **Discord:** [@trinix](https://discordapp.com/users/192210511180333059)
+
+---
+
+## License
+
+This project is licensed under the [MIT License](https://github.com/TrinixCrypto/dotfun/blob/main/LICENSE).
+
+Feel free to use and modify, but don't forget to give credit where it's due! 😊
